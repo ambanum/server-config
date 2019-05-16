@@ -28,7 +28,7 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_session_cache shared:SSL:50m;
 
-    location /ads/ {
+    location /ads {
 	alias /home/cloud/political-ads-legality/build/;
         index index.html;
 	try_files $uri $uri/ index.html =404;

@@ -1,11 +1,12 @@
-/etc/hostname
+/etc/apt/sources.list
+/etc/apt/sources.list.d
 /etc/crontab
 /etc/cron.hourly
 /etc/cron.daily
 /etc/cron.weekly
 /etc/cron.monthly
-/etc/ssh/sshd_config
+/etc/hostname
+/etc/nginx/conf.d
 /etc/nginx/nginx.conf
-/etc/nginx/conf.d/*
 /etc/nginx/sites-available
-/etc/apt/sources.list.d/*
+/etc/ssh/sshd_config
