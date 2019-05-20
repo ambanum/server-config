@@ -28,15 +28,15 @@ server {
     ssl_prefer_server_ciphers on;
     ssl_session_cache shared:SSL:50m;
 
-    location /static/ads {
-        alias /home/cloud/political-ads-scraper/data;
-        autoindex on;
-    }
-
     location /ads {
 	alias /home/cloud/political-ads-legality/build/;
         index index.html;
 	try_files $uri $uri/ index.html =404;
+    }
+
+    location /ads/dumps {
+        alias /home/cloud/political-ads-scraper/data;
+        autoindex on;
     }
 
     location /bots {
