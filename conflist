@@ -5,6 +5,7 @@
 /etc/cron.daily
 /etc/cron.weekly
 /etc/cron.monthly
+/etc/fstab
 /etc/hostname
 /etc/nginx/conf.d
 /etc/nginx/nginx.conf

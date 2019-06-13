@@ -1,0 +1,4 @@
+# /etc/fstab: static file system information.
+proc	/proc	proc	nodev,noexec,nosuid	0	0
+/dev/vda1	/	ext3	errors=remount-ro	0	1
+/dev/vdb	/mnt/data	ext4	defaults	0	0
