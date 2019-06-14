@@ -37,7 +37,7 @@ server {
         return 301 /political-ads;
     }
     location /ads/dumps {
-        alias /home/cloud/political-ads-scraper/data;
+        alias /mnt/data/political-ads-scraper;
         autoindex on;
         if ($request_method = 'OPTIONS') {
             add_header 'Access-Control-Allow-Origin' '*';
