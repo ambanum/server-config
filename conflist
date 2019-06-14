@@ -1,3 +1,4 @@
+/etc/aliases.example
 /etc/apt/sources.list
 /etc/apt/sources.list.d
 /etc/crontab
@@ -10,4 +11,5 @@
 /etc/nginx/conf.d
 /etc/nginx/nginx.conf
 /etc/nginx/sites-available
+/etc/smtprc
 /etc/ssh/sshd_config
