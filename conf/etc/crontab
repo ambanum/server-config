@@ -14,8 +14,11 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 52 6	1 * *	root	test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 #
 
-22 14  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/reports.py | msmtp root
-22 17  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/fetch.py | msmtp root
-22 16  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/graph.py | msmtp root
-18 20  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/twitter_fetch/fetch.py | msmtp root
-18 14  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/google_fetch/fetch.py | msmtp root
+22 14  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/reports.py 2>&1 | /usr/bin/ifne msmtp root
+22 17  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/fetch.py 2>&1 | /usr/bin/ifne msmtp root
+22 16  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/facebook_fetch/graph.py 2>&1 | /usr/bin/ifne msmtp root
+
+18 20  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/twitter_fetch/fetch.py 2>&1 | /usr/bin/ifne msmtp root
+38 21  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/twitter_fetch/graph.py 2>&1 | /usr/bin/ifne msmtp root
+
+18 14  * * *   cloud  /home/cloud/.local/share/virtualenvs/political-ads-scraper/bin/python /home/cloud/political-ads-scraper/google_fetch/fetch.py 2>&1 | /usr/bin/ifne msmtp root
