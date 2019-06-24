@@ -11,5 +11,5 @@
 /etc/nginx/conf.d
 /etc/nginx/nginx.conf
 /etc/nginx/sites-available
-/etc/smtprc
+/etc/msmtprc
 /etc/ssh/sshd_config
